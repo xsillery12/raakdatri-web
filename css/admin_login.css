@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Poppins:wght@200;300;400;500;600;700&family=Urbanist:wght@400;500;600;700;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+*::selection{
+    color: white;
+    background-color:#BDDFE6;
+}
+
+::webkit-scrollbar {
+    width: 1rem;
+    height: .5rem;
+}
+
+::webkit-scrollbar-track {
+    background-color: none;
+}
+
+::webkit-scrollbar-thumb{
+    background-color: #BDDFE6;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #BDDFE6;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.btn, .delete-btn, .option-btn {
+    display: block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    width: 100%;
+    color: white;
+    padding: 1rem 3rem;
+    text-transform: capitalize;
+}
+
+.btn {
+    background-color: black;
+}
+
+.delete-btn {
+    background-color: red;
+}
+
+.option-btn {
+    background-color: orange;
+}
+
+.btn:hover, 
+.delete-btn:hover, 
+.option-btn:hover {
+    background-color: #27b737;
+}
+
+.flex-btn {
+    display: flex;
+    gap: 1rem;
+}
+
+.message {
+    position: sticky;
+    top: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.message span {
+    font-size: 2rem;
+    color: black;
+}
+
+.message i {
+    font-size: 2.5rem;
+    color: red;
+    cursor: pointer;
+}
+
+.message i:hover {
+    color: black;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container form {
+    background-color: white;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0,.1);
+    padding: 3rem;
+    margin-top: 20rem;
+    text-align: center;
+    width: 55rem;
+}
+
+.form-container form h3 {
+    font-size: 3rem;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.form-container form p {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.form-container form .box{
+    width: 94%;
+    background-color: white;
+    padding: 1.3rem;
+    font-size: 1.4rem;
+    color: var(--black);
+    margin: 1rem 0;
+    border: .2rem solid;
+    font-size: 1.8rem;
+    border-radius: .7rem;
+}
+
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+}

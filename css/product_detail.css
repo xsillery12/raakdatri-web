@@ -1,0 +1,1008 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Tenor+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Tenor+Sans&family=Urbanist:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Urbanist:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&display=swap');
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    list-style-type: none;
+    border: none;
+}
+
+body {
+    padding-top: 60px;
+}
+
+html {
+    font-size: 62.5%;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+.navbar {
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #BDDFE6;
+    padding: 20px 20px;
+    padding: 10px;
+    color: black;
+    z-index: 1000;
+}
+
+.logo {
+    text-align: center;
+    text-decoration: none !important;
+    color: #000000;
+}
+
+.logo-text {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 45px;
+    text-align: center !important;
+    margin: 0 auto;
+    max-width: 40%;
+    font-weight: normal;
+    text-decoration: none !important;
+    color: #000000;
+    transition: transform 0.8s, opacity 0.8s;
+}
+.logo a {
+  text-decoration: none !important;
+  transition: transform 0.8s, opacity 0.8s;
+}
+
+.profile-dropdown {
+    posision: relative;
+    width: fit-content;
+    margin-right: 100px;
+}
+
+.profile-dropdown-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    border: 1px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 160px;
+    height: 55px;
+    transition: box-shadow 0.2s background-color 0.2s;
+}
+
+.profile-dropdown-btn:hover {
+    background-color: #EAEAEA;
+    box-shadow: rgb(127, 183, 126, 0.2);
+}
+
+.profile-dropdown-btn span {
+    margin: 0 0.5rem;
+    margin-right: 0;
+}
+
+.profile-img {
+    position: relative;
+    right: 1px;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: url(../img/daffa.png);
+    background-size: cover;
+}
+
+.profile-img i {
+    position: absolute;
+    right: -0.2rem;
+    bottom: -0.1rem;
+    font-size: 1.5rem;
+    color: #4CBB17;
+}
+
+.profile-dropdown-list {
+    position: absolute;
+    top: 80px;
+    width: 220px;
+    right: 85px;
+    background-color: #DCE9EC;
+    border-radius: 10px;
+    box-shadow: 0 0 0 rgba(0,0,0,.7);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-in-out;
+}
+
+.profile-dropdown-list.active {
+    max-height: 500px;
+}
+
+.profile-dropdown-list hr {
+    border: 0.2px solid black;
+}
+
+.profile-dropdown-list-item {
+    padding: 0.5rem 0 0.5rem 1rem;
+    transition: background-color 0.2s, padding-left 0.2s;
+}
+
+.profile-dropdown-list-item:hover {
+    padding-left: 1.5rem;
+    background-color: #CFCFCF;
+}
+
+.profile-dropdown-list-item a {
+    display: flex;
+    padding: 5px;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: black;
+}
+
+.profile-dropdown-list-item a i {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    background-color: black;
+    color: white;
+    line-height: 2.3rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-left: 950px;
+}
+
+.icon {
+    font-size: 24px;
+    margin-left: 25px;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+.category {
+    margin-top: 40px;
+    margin-left: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.kategori {
+    margin: 0;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.category h2 {
+  text-decoration: none !important;
+  color: #000000;
+}
+
+.category a {
+  text-decoration: none !important
+}
+
+#search-form {
+  position: fixed;
+  top: -110%; left: 0;
+  height: 100%; width: 100%;
+  z-index: 1004;
+  background: rgba(0,0,0,.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  transition: top 0.5s;
+}
+
+#search-form.active {
+  top: 0;
+}
+
+#search-form #search-box:focus {
+  outline: none;
+}
+
+#search-form #search-box {
+  width: 40rem;
+  border: none;
+  border-bottom: .1rem solid #fff;
+  padding: 1rem 0;
+  color: #fff;
+  font-size: 30px;
+  text-transform: none;
+  background: none;
+  text-decoration: none !important;
+}
+
+#search-form #search-box::placeholder {
+  color: #fff;
+}
+
+#search-form #search-box::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+#search-form label {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+#search-form label:hover {
+  color: #BDDFE6;
+}
+
+#search-form #close {
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+  top: 2rem; right: 3rem;
+  font-size: 5rem;
+}
+
+#search-form #close:hover {
+  color: #BDDFE6;
+}
+
+.single-product {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-2 {
+    flex-basis: calc(50% - 90px);
+    margin-bottom: 20px;
+    margin-left: 90px;
+}
+
+.product-images {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.product-info {
+    padding: 0 20px;
+    margin-top: -10px;
+    margin-right: 50px;
+}
+
+.product-info h1 {
+    margin-top: 20px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 35px;
+    font-weight: 600;
+    color: black;
+}
+
+.product-info h2 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #9C9C9C;
+}
+
+.product-info h2 a{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #9C9C9C;
+}
+
+.product-info h2 a:hover {
+    color: black;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.rating i {
+    margin-right: 3px;
+    font-size: 22px; 
+}
+
+.rating p {
+    margin-left: 5px;
+}
+
+.product-info h4 {
+    margin-top: 15px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.product-info select {
+    margin-top: 25px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    background: #D9D9D9;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.number-input {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    max-width: 70px;
+    background-color: black;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    margin-bottom: 35px;
+  }
+  
+  .number-input input {
+    width: 20px; 
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  .number-input button {
+    padding: 5px 10px;
+    background-color: black;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+  }
+
+  .number-input .minus {
+    padding: 5px 10px;
+    background-color: black;
+    border: none;
+    color: red;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+
+  .number-input .plus{
+    padding: 5px 10px;
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  input[type="number"] {
+    -webkit-appearance: textfield; 
+    -moz-appearance: textfield;
+  }
+  
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
+
+  .btn-1 {
+    background-color: #BDDFE6;
+  font-family: "Urbanist", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: black;
+  width: 50px;
+  height: 100px;
+  padding: 11px;
+  border-radius: 30px;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  margin-top: 20px;
+  }
+
+  .btn-1:hover,
+  .btn-2:hover {
+    border: 3px solid #BDDFE6;
+    background: white;
+  }
+
+  .btn-2 {
+    margin-left: 15px;
+    background-color: #BDDFE6;
+    font-family: "Urbanist", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    width: 60px;
+    height: 100px;
+    padding: 11px;
+    border-radius: 30px;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    margin-top: 20px;
+  }
+
+#gambar {
+    width: 250px;
+    margin-top: 20px;
+}
+.product-info h3 {
+    margin-top: 30px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    color: black;
+}
+
+.product-info p {
+    margin-top: 20px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+}
+
+.small-img-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.small-img-col {
+    flex-basis: 20%;
+    margin-right: 10px; 
+}
+
+.small-img-col:last-child {
+    margin-right: 0;
+}
+
+.desc {
+    margin-top: 20px;
+    margin-left: 150px;
+}
+
+.desc h2 {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.desc h3 {
+    margin-top: 10px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+}
+
+.desc p {
+    width: 80%;
+    margin-top: 10px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.desc hr {
+    margin-top: 5px;
+    border: 2px solid black;
+    width: 115px;
+    color: black;
+}
+
+.desc img {
+    margin-top: 20px;
+    width: 400px;
+}
+
+.foot {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.foot .FOOTER {
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+.foot .overlap {
+  position: absolute;
+  width: 100%;
+  height: 336px;
+  top: 130px;
+  left: 0;
+  background-color: #c8e3e9;
+}
+
+.foot .line {
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+}
+
+.foot .policy {
+  position: absolute;
+  width: 132px;
+  height: 269px;
+  top: 60px;
+  left: 969px;
+}
+
+.foot .overlap-group {
+  position: relative;
+  width: 128px;
+  height: 269px;
+}
+
+.foot .order-status {
+  position: absolute;
+  width: 128px;
+  top: 34px;
+  left: 0;
+  font-family: "Urbanist", serif;
+  font-weight: 400;
+  color: #606060;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.foot .text-wrapper {
+  position: absolute;
+  width: 79px;
+  top: 0;
+  left: 0;
+  font-family: "Urbanist", serif;
+  font-weight: 600;
+  color: #121212;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.foot .custommer-care {
+  position: absolute;
+  width: 99px;
+  height: 203px;
+  top: 60px;
+  left: 608px;
+}
+
+.foot .clothing-tops {
+  position: absolute;
+  width: 95px;
+  top: 39px;
+  left: 0;
+  font-family: "Urbanist", serif;
+  font-weight: 400;
+  color: #606060;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.foot .clothing-tops a {
+  color: #606060;
+  text-decoration: none;
+}
+
+.foot .div {
+  position: absolute;
+  width: 76px;
+  top: 0;
+  left: 0;
+  font-family: "Urbanist", serif;
+  font-weight: 600;
+  color: #121212;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.foot .about-us {
+  position: absolute;
+  width: 144px;
+  height: 191px;
+  top: 60px;
+  left: 766px;
+}
+
+.foot .overlap-2 {
+  position: relative;
+  width: 140px;
+  height: 191px;
+}
+
+.foot .career-at-raakdatri {
+  position: absolute;
+  width: 140px;
+  top: 34px;
+  left: 0;
+  font-family: "Urbanist", serif;
+  font-weight: 400;
+  color: #606060;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 26px;
+}
+
+.foot .career-at-raakdatri a {
+  color: #606060;
+  text-decoration: none;
+}
+
+.foot .text-wrapper-2 {
+  position: absolute;
+  width: 75px;
+  top: 0;
+  left: 0;
+  font-family: "Urbanist", serif;
+  font-weight: 600;
+  color: #121212;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.foot .contact {
+  position: absolute;
+  width: 244px;
+  height: 146px;
+  top: 60px;
+  left: 1160px;
+}
+
+.foot .overlap-3 {
+  position: relative;
+  width: 236px;
+  height: 146px;
+}
+
+.foot .overlap-4 {
+  position: absolute;
+  width: 236px;
+  height: 146px;
+  top: 0;
+  left: 0;
+}
+
+.foot .text-wrapper-3 {
+  position: absolute;
+  width: 128px;
+  top: 68px;
+  left: 29px;
+  font-family: "Urbanist", serif;
+  font-weight: 400;
+  color: #606060;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+  text-decoration: underline;
+}
+
+.foot .text-wrapper-4 {
+  position: absolute;
+  width: 108px;
+  top: 102px;
+  left: 29px;
+  font-family: "Urbanist", serif;
+  font-weight: 400;
+  color: #606060;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+  text-decoration: underline;
+}
+
+.foot .p {
+  position: absolute;
+  width: 207px;
+  top: 34px;
+  left: 29px;
+  font-family: "Urbanist", serif;
+  font-weight: 400;
+  color: #606060;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.foot .text-wrapper-5 {
+  position: absolute;
+  width: 164px;
+  top: 0;
+  left: 1px;
+  font-family: "Urbanist", serif;
+  font-weight: 600;
+  color: #121212;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+}
+
+.foot .phone-incoming {
+  position: absolute;
+  width: 20px;
+  height: 16px;
+  top: 37px;
+  left: 0;
+}
+
+.foot .map-pin {
+  position: absolute;
+  width: 20px;
+  height: 16px;
+  top: 105px;
+  left: 0;
+}
+
+.foot .mail {
+  position: absolute;
+  width: 21px;
+  height: 14px;
+  top: 73px;
+  left: 0;
+}
+
+.foot .newsletter {
+  position: absolute;
+  width: 463px;
+  height: 170px;
+  top: 60px;
+  left: 48px;
+}
+
+.foot .form {
+  position: absolute;
+  width: 461px;
+  height: 58px;
+  top: 76px;
+  left: 0;
+}
+
+.foot .overlap-group-wrapper {
+  width: 463px;
+  height: 58px;
+}
+
+.foot .overlap-group-2 {
+  position: relative;
+  width: 461px;
+  height: 58px;
+}
+
+.foot .rectangle {
+  position: absolute;
+  width: 400px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: #e5e5e5;
+}
+
+.foot .email-input {
+  position: absolute;
+  width: 400px; 
+  height: 40px; 
+  top: 0; 
+  left: 0; 
+  border: none;
+  border-radius: 5px;
+  font-family: "Urbanist", serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #121212;
+  padding: 5px;
+}
+
+.foot .submit-button {
+  position: absolute;
+  top: 0;
+  left: -55px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.foot .text-wrapper-6 {
+  position: absolute;
+  width: 109px;
+  top: 14px;
+  left: 21px;
+  font-family: "Urbanist", serif;
+  font-weight: 400;
+  color: #a0a0a0;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.foot .arrow-right {
+  position: absolute;
+  width: 25px;
+  height: 24px;
+  top: 13px;
+  left: 424px;
+}
+
+.foot .social {
+  position: absolute;
+  width: 220px;
+  height: 24px;
+  top: 146px;
+  left: -57px;
+}
+
+.foot .sign-up-today-and {
+  position: absolute;
+  width: 304px;
+  height: 56px;
+  top: 0;
+  left: 0;
+  font-family: "Urbanist", serif;
+  font-weight: 600;
+  color: #121212;
+  font-size: 20px;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.foot .bottom-footer {
+  position: absolute;
+  width: 100%;
+  height: 62px;
+  top: 465px;
+  left: 0;
+}
+
+.foot .element-raakdatri-all {
+  position: absolute;
+  width: 400px;
+  top: 18px;
+  left: 650px;
+  font-family: "Urbanist", serif;
+  font-weight: 400;
+  color: transparent;
+  font-size: 17px;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.foot .span {
+  color: #a0a0a0;
+}
+
+.foot .text-wrapper-7 {
+  color: #121212;
+}
+
+.foot .line-2 {
+  width: 100%;
+  position: absolute;
+  height: 1px;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+}
+
+@media (max-width: 992px) {
+  .box-2 {
+    width: 100%;
+    height: auto;
+
+  .box-2 .shop-by-categories {
+    width: 100%;
+    left: 0;
+      ext-align: center; 
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      padding: 10px 10px;
+  }
+
+  .logo-text {
+      font-size: 30px;
+      margin-left: 10px;
+  }
+
+  .icons {
+      margin-right: 10px;
+  }
+
+  .icon {
+      font-size: 18px;
+      margin-left: 10px;
+  }
+
+  .category {
+      margin-top: 20px;
+      margin-left: 10px;
+      gap: 50px;
+  }
+
+  .kategori {
+      font-size: 18px;
+  }
+
+  .container {
+      padding: 16px;
+  }
+
+  .slider {
+      width: 100%;
+  }
+
+  .slider img {
+      width: 100%;
+  }
+
+  .box-2 .text-wrapper {
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .review-container {
+    width: 100%;
+  }
+
+  .foot {
+    width: 100%;
+  }
+}

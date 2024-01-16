@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Poppins:wght@200;300;400;500;600;700&family=Urbanist:wght@400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+*::selection {
+  color: white;
+  background-color: #bddfe6;
+}
+
+::webkit-scrollbar {
+  width: 1rem;
+  height: 0.5rem;
+}
+
+::webkit-scrollbar-track {
+  background-color: none;
+}
+
+::webkit-scrollbar-thumb {
+  background-color: #bddfe6;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  min-height: 100vh;
+  
+}
+
+.profile-container .profile {
+  width: 40rem;
+  border-radius: 0.5rem;
+  background-color: #bddfe6;
+  padding: 2rem;
+  text-align: center;
+  margin-top: -140px;
+}
+
+
+.profile-container .profile img {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.profile-container .profile h3 {
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+  color: black;
+}
+
+.profile-container .profile button {
+  border-radius: 0.5rem;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  background: black;
+  color: #fff;
+  margin-top: 1rem;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}

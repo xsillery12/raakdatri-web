@@ -1,0 +1,430 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Tenor+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Tenor+Sans&family=Urbanist:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Urbanist:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&display=swap");
+
+:root {
+  --color-gray: #737888;
+  --color-lighter-gray: #e3e5ed;
+  --color-light-gray: #f7f7fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  list-style-type: none;
+  border: none;
+}
+
+body {
+  padding-top: 60px;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-padding-top: 5.5rem;
+  scroll-behavior: smooth;
+}
+.navbar {
+  position: fixed; 
+  top: 0; 
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #bddfe6;
+  padding: 20px 20px;
+  padding: 10px;
+  color: black;
+  z-index: 1000;
+}
+
+.logo {
+  text-align: center;
+  text-decoration: none !important;
+  color: #000000;
+}
+
+.logo-text {
+  font-family: "Tenor Sans", sans-serif;
+  font-size: 45px;
+  text-align: center !important;
+  margin: 0 auto;
+  max-width: 40%;
+  font-weight: normal;
+  text-decoration: none !important;
+  color: #000000;
+  transition: transform 0.8s, opacity 0.8s;
+}
+.logo a {
+  text-decoration: none !important;
+  transition: transform 0.8s, opacity 0.8s;
+}
+
+.profile-dropdown {
+  posision: relative;
+  width: fit-content;
+  margin-right: 100px;
+}
+
+.profile-dropdown-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  border: 1px solid black;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 160px;
+  height: 55px;
+  transition: box-shadow 0.2s background-color 0.2s;
+}
+
+.profile-dropdown-btn:hover {
+  background-color: #eaeaea;
+  box-shadow: rgb(127, 183, 126, 0.2);
+}
+
+.profile-dropdown-btn span {
+  margin: 0 0.5rem;
+  margin-right: 0;
+}
+
+.profile-img {
+  position: relative;
+  right: 1px;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: url(../img/daffa.png);
+  background-size: cover;
+}
+
+.profile-img i {
+  position: absolute;
+  right: -0.2rem;
+  bottom: -0.1rem;
+  font-size: 1.5rem;
+  color: #4cbb17;
+}
+
+.profile-dropdown-list {
+  position: absolute;
+  top: 80px;
+  width: 220px;
+  right: 85px;
+  background-color: #dce9ec;
+  border-radius: 10px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.profile-dropdown-list.active {
+  max-height: 500px;
+}
+
+.profile-dropdown-list hr {
+  border: 0.2px solid black;
+}
+
+.profile-dropdown-list-item {
+  padding: 0.5rem 0 0.5rem 1rem;
+  transition: background-color 0.2s, padding-left 0.2s;
+}
+
+.profile-dropdown-list-item:hover {
+  padding-left: 1.5rem;
+  background-color: #cfcfcf;
+}
+
+.profile-dropdown-list-item a {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: black;
+}
+
+.profile-dropdown-list-item a i {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  background-color: black;
+  color: white;
+  line-height: 2.3rem;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  margin-left: 950px;
+}
+
+.icon {
+  font-size: 24px;
+  margin-left: 25px;
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer;
+}
+
+.category {
+  margin-top: 40px;
+  margin-left: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.kategori {
+  margin: 0;
+  font-family: "Urbanist", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.category h2 {
+  text-decoration: none !important;
+  color: #000000;
+}
+
+.category a {
+  text-decoration: none !important;
+}
+
+#search-form {
+  position: fixed;
+  top: -110%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1004;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  transition: top 0.5s;
+}
+
+#search-form.active {
+  top: 0;
+}
+
+#search-form #search-box:focus {
+  outline: none;
+}
+
+#search-form #search-box {
+  width: 40rem;
+  border: none;
+  border-bottom: 0.1rem solid #fff;
+  padding: 1rem 0;
+  color: #fff;
+  font-size: 30px;
+  text-transform: none;
+  background: none;
+  text-decoration: none !important;
+}
+
+#search-form #search-box::placeholder {
+  color: #fff;
+}
+
+#search-form #search-box::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+#search-form label {
+  color: #fff;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+#search-form label:hover {
+  color: #bddfe6;
+}
+
+#search-form #close {
+  position: absolute;
+  color: #fff;
+  cursor: pointer;
+  top: 2rem;
+  right: 3rem;
+  font-size: 5rem;
+}
+
+#search-form #close:hover {
+  color: #bddfe6;
+}
+
+.head h3 {
+  text-align: left;
+  color: black;
+  font-family: "Urbanist", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  margin-top: 45px;
+  margin-left: 75px;
+}
+
+.clickable-heading-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.clickable-heading {
+  width: 180px;
+  font-family: "Urbanist", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+  margin-left: 30px;
+  background-color: white;
+  padding: 15px;
+  border: 1.8px solid black;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#ewallet_options.ewallet-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 30rem);
+  gap: 10px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#ewallet_options label {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+#ewallet_options input[type="radio"] {
+  margin-right: 10px;
+}
+
+#ewallet_options img {
+  width: 100%;
+  height: 4rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.shipping-options h2 {
+  font-family: "Urbanist", sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 455px;
+  margin-top: 30px;
+}
+
+.shipping-options select {
+  font-family: "Urbanist", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px; 
+  border: 1px solid black;
+  background-color: #fff; 
+  width: 40.2%; 
+  box-sizing: border-box; 
+  margin-bottom: 10px; 
+  border-radius: 8px;
+  margin-left: 455px;
+  margin-top: 10px;
+}
+
+.shipping-options select option:checked {
+  background-color: #f0f0f0;
+}
+
+.total-price {
+  background-color: #f0f0f0; 
+  padding: 15px;
+  width: 40.2%;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-left: 455px;
+  font-family: "Urbanist", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-price p:nth-child(2) {
+  margin-left: auto;
+}
+
+.pay {
+  width: 40.2%;
+  margin-top: 25px;
+  margin-left: 455px;
+  font-family: "Urbanist", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pay p:nth-child(2) {
+  margin-left: auto; 
+}
+
+.how-to-pay {
+  background-color: #f0f0f0; 
+  padding: 15px; 
+  width: 40.2%;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-left: 455px; 
+  font-family: "Urbanist", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.how-to-pay p {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.place-order-btn {
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  padding: 5px 30px;
+  font-family: "Urbanist", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  width: 300px;
+  height: 60px;
+  margin-left: 615px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
